@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*@media only screen and(min-width: 768px){
+*/
+body,h1,h2,h3,h4,h5,h6,span,input,label,small{
+  font-family: 'Roboto' !important;
+}
+	
+.welcome{
+	height: 100vh;
+	background: #fff;
+}
+
+.item img{
+	width: 60%;
+	height: 35vh;
+}
+
+#validation{
+    background: url("img/icons/phoneandnumber.png") left top;
+}
+
+.linkTerms{
+    color: teal;
+    text-decoration: none;
+}
+#terms:cheked{
+    background-image: teal url("img/icons/check-symbol") center center;
+}
+
+.orange{
+    background: orange;
+    padding: 20px 10px;
+}
+
+.mtop5{
+    margin-top: 5%;
+}
+
