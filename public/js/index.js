@@ -3,37 +3,35 @@
 const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
-  wrapper.append(Welcome());
-  
-  //BUTTON REGISTER
-  if(state.register != null){
-  	root.empty();
-	wrapper.append(Validation());
+
+  if(state.register == null){
+      wrapper.append(Welcome(_ => render(root)));
+      root.append(wrapper);
   }
-
-  //NUMBER VALIDATION
-  if(state.number != null){
-  	root.empty();
-  	console.log("validamos tu numero ahora toca registrarte");
-  	wrapper.append(Register());
+  if(state.register == 1){
+	wrapper.append(Validation(_ => render(root)));
+    root.append(wrapper);
   }
-
-  root.append(wrapper);
-
+  if(state.register == 2){
+  	wrapper.append(Codeuser(_ => render(root)));
+    root.append(wrapper);
+  }
+  if(state.register == 3){
+  	wrapper.append(Register(_ => render(root)));
+    root.append(wrapper);
+  }
 }
 
 const state = {
   register: null,
   number: null,
-  code:null
+  code:null,
+  terms:null,
+  card: null
 };
 
 
 $( _ => {
-/*  getPokemon((err, data) => {
-    if (err) console.log(err);*/
     const root = $("#root");
     render(root);
-/*  });
-*/
 });

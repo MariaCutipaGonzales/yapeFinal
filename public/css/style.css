@@ -1,43 +1,148 @@
 *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-/*@media only screen and(min-width: 768px){
-*/
 body,h1,h2,h3,h4,h5,h6,span,input,label,small{
   font-family: 'Roboto' !important;
 }
-	
+
 .welcome{
 	height: 100vh;
 	background: #fff;
-}
-
-.item img{
-	width: 60%;
-	height: 35vh;
-}
-
-#validation{
-    background: url("img/icons/phoneandnumber.png") left top;
+    text-align: center;
 }
 
 .linkTerms{
     color: teal;
     text-decoration: none;
 }
+
 #terms:cheked{
-    background-image: teal url("img/icons/check-symbol") center center;
+    background-image: teal url("..img/icons/check-symbol") center center;
 }
 
 .orange{
-    background: orange;
-    padding: 20px 10px;
+    background: #f9c70e!important;
+    font-size: 3em;
+    border-radius: 10px;
+    color: white;
+    border:none;
+}
+
+.register{
+    width: 70%;
+    height: 5%;
 }
 
 .mtop5{
-    margin-top: 5%;
+    margin-top: 12%;
+}
+.mtop10{
+    margin-top: 20%;
 }
 
+.mbot5{
+    margin-bottom: 5%!important;
+}
+
+.minput10{
+    margin-bottom: 10%!important;
+}
+
+.item img{
+    margin: 20px auto;
+}
+
+.bold{
+    font-weight: 600;
+}
+.font3{
+    font-size: 3em;
+}
+
+section{
+    width: 90%;
+    height: 100vh;
+    margin:0px auto;
+    text-align: center;
+}
+
+.continuar{
+    padding: 0.5em 3em;
+}
+
+button:disabled{
+    background: silver!important;
+}
+input[type="text"],
+input[type="number"],
+input[type="tel"]{
+    border-left: 5px;
+    margin:0px auto;
+    font-size: 4em;
+    text-align: center;
+    border-bottom: 2.5px solid #9e9e9e;
+}
+
+input[type="checkbox"]{
+    opacity: 1!important;
+    position: relative;
+    appearance:none;
+    left: 10px!important;
+    width: 60px;
+    height: 50px;
+    margin-left:13%;
+    outline: none;
+}
+input[type="checkbox"]:checked{
+    background-color: darkturquoise;
+}
+
+.validation p{
+    font-size: 2.5rem;
+}
+#validation,#codeuser,#name,#mail,#password{
+    background-size: 200px cover;
+    padding-left: 30%;
+    padding-right: 25%;
+    width: 35%;
+    height: 6rem;
+    margin: 0px auto;
+}
+#name,#mail,#password{
+    padding-left: 20%!important;
+    padding-right: 10%!important;
+    width: 65%;
+    border-bottom: 2.5px solid #9e9e9e;
+    font-size: 3.5em!important;
+}
+#name{
+    background: url(../img/icons/user.png) no-repeat 30px 10px;
+}
+#mail{
+    background: url(../img/icons/message-gray.png) no-repeat 30px 10px;
+}
+#validation{
+    background: url(../img/icons/phoneandnumber.png) no-repeat 30px -10px;
+}
+#codeuser,#password{
+    background: url(../img/icons/lock.png) no-repeat 30px -2px;
+}
+
+.time{
+    font-size: 3em;
+}
+
+/*modify Carousel*/
+.owl-carousel .owl-item img {
+    width: 60%!important;
+}
+.owl-theme .owl-dots .owl-dot span  {
+    width: 35px!important;
+    height: 35px!important;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background: orange!important;
+}

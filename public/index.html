@@ -8,23 +8,27 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="css/owl.carousel.min.css" /><!-- owl carousel -->
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 </head>
 <body>
 	<div id="root"></div>
 	<script src="js/vendor/jquery-3.2.1.min.js"></script>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 	<script src="js/vendor/owl.carousel.min.js"></script><!-- owl carousel -->
-	<script src="js/components/register.js"></script>
-	<script src="js/components/validation.js"></script>
 	<script src="js/components/welcome.js"></script>
+    <script src="js/components/register.js"></script>
+    <script src="js/components/codeuser.js"></script>
+	<script src="js/components/validation.js"></script>
 	<script src="js/index.js"></script>
     <script>
-     $('.fadeOut').owlCarousel({
+      $( _ => {
+         $('.slideCarousel').owlCarousel({
                 items: 1,
-                animateOut: 'fadeOut',
+                animateOut: 'slideCarousel',
                 loop: true,
                 margin: 10,
-              });
-    </script>
+         });
+      });
+     </script>
 </body>
 </html>
