@@ -5,7 +5,7 @@ const render = (root) => {
   const wrapper = $('<div class="wrapper"></div>');
   
   if(state.register == null){
-       wrapper.append(Hello(_ => render(root)));
+       wrapper.append(Welcome(_ => render(root)));
     }
   if (state.register == 1){
 	     wrapper.append(Validation(_ => render(root)));
