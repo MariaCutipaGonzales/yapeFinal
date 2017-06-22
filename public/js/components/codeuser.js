@@ -8,22 +8,8 @@ const Codeuser = (update) =>{
     const time = $('<span class="time"></span>');
     const div = $('<div class="col s12 mtop5"></div>');
 	const input = $('<input id="codeuser" type="text" maxlength="6" placeholder="- - - - -"/><br>');
-        
-    input.on('keyup', (e)=>{
-        if(input.val() == state.code){
-            state.register = 3;
-            update();
-        }    
-    });
-    
-    div.append(input);
-    timer.append(time);
-    codeuser.append(img);
-    codeuser.append(info);
-    codeuser.append(div);
-    codeuser.append(timer);
-    second();
-    function second(){
+            
+    const second =()=>{
         var sec = 21;
         setInterval(()=>{
             sec--;
@@ -34,12 +20,30 @@ const Codeuser = (update) =>{
                 $.post("api/resendCode",{phone:state.number,terms:true},function(response){
                    if(response.success == true){
                        state.code = response.data;
-                       second();
                        clearInterval(sec);
+                       second();
                    }                   
                 },'json');
             }
         },1000);
-    }    
+    }
+
+    second();    
+
+    input.on('keyup', (e)=>{
+        if(input.val() == state.code){
+            state.register = 3;
+            update();
+            $(".codeuser").finish();
+            clearInterval(second);
+        }    
+    });
+
+    div.append(input);
+    timer.append(time);
+    codeuser.append(img);
+    codeuser.append(info);
+    codeuser.append(div);
+    codeuser.append(timer);
     return codeuser;
 }

@@ -8,6 +8,11 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
   font-family: 'Roboto' !important;
 }
 
+.yape{
+    background: #fbd43b;
+    width:100%;
+    height: 100vh;
+}
 .welcome{
 	height: 100vh;
 	background: #fff;
@@ -15,7 +20,7 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 }
 
 .linkTerms{
-    color: teal;
+    color: #266A68;
     text-decoration: none;
 }
 
@@ -23,6 +28,20 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
     background-image: teal url("..img/icons/check-symbol") center center;
 }
 
+.env-rec{
+    flex-wrap: wrap;
+    display:flex;
+    padding-top: 15%;
+}
+
+.linkhello{
+    display: inline-block;
+}
+
+#send{
+    margin-left: 25px;
+    margin-right: 40%;
+}
 .orange{
     background: #f9c70e!important;
     font-size: 3em;
@@ -50,7 +69,9 @@ body,h1,h2,h3,h4,h5,h6,span,input,label,small{
 .minput10{
     margin-bottom: 10%!important;
 }
-
+.contenido{
+   padding-top: 60%;
+}
 .item img{
     margin: 20px auto;
 }
@@ -103,7 +124,12 @@ input[type="checkbox"]:checked{
 .validation p{
     font-size: 2.5rem;
 }
-#validation,#codeuser,#name,#mail,#password{
+
+.fvencimiento{
+    height: 4rem!important;
+    font-size: 3.5em!important;
+}
+#validation,#codeuser,#name,#mail,#password,#card,#lockCard{
     background-size: 200px cover;
     padding-left: 30%;
     padding-right: 25%;
@@ -111,7 +137,7 @@ input[type="checkbox"]:checked{
     height: 6rem;
     margin: 0px auto;
 }
-#name,#mail,#password{
+#name,#mail,#password,#card{
     padding-left: 20%!important;
     padding-right: 10%!important;
     width: 65%;
@@ -130,11 +156,76 @@ input[type="checkbox"]:checked{
 #codeuser,#password{
     background: url(../img/icons/lock.png) no-repeat 30px -2px;
 }
-
+#lockCard{
+    background: url(../img/icons/lock.png) no-repeat 30px -2px;
+}
+#card{
+    background: url(../img/icons/card.png) no-repeat 30px 15px;
+}
 .time{
     font-size: 3em;
 }
 
+.codeuser a{
+    font-size: 2.5em;
+}
+
+.bg-white{
+    color: white!important;
+}
+
+.hello{
+    margin:0px!important;
+    width: 100%;
+}
+.header{
+    background:#451e36;
+    width: 100%!important;
+    height: 40vh;
+}
+
+.engine{
+    float: right;
+    margin-right: 40px;
+    margin-top: 70px;
+}
+
+.movimientos{
+    width: 100%;
+    height: 60vh;
+    background: rgb(56,5,42);
+}
+
+.border-div{
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.circular{
+    height: 50px;
+    width: 50px;
+    float: right;
+    margin-right: 20px;
+}
+
+.detail{
+    padding-left: 5%;
+}
+
+.pago{
+    flex-wrap: wrap;
+    display:flex;
+    text-align: left;
+}
+.header .linkTerms{
+    font-size: 3em;
+}
+.ult-mov{
+    float: left;
+    margin-left: 20px;
+}
 /*modify Carousel*/
 .owl-carousel .owl-item img {
     width: 60%!important;
